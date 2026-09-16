@@ -972,17 +972,30 @@ const PROJECTS = [
   {
     id:"kacey-musgraves-poster",
     media:{type:"video", src:"kacey-musgraves-poster.mp4", poster:"kacey-musgraves-poster-poster.jpg"},
-    title:"Kacey Musgraves, Poster at a Concert",
+    title:"I Got Kacey Musgraves Talking About Embark",
     client:"Embark Vet",
     year:2023,
     isPlayground:false,
+    featured:true,
     projectType:["Client Work"],
-    workType:["Organic Social"],
-    tags:["OOH","Creative Strategy","Trend"],
-    size:"sm",aspect:"9/16",hue:"a",
+    workType:["Organic Social","Creative Strategy"],
+    tags:["Organic Social","Creative Strategy","Guerrilla Marketing"],
+    size:"md",aspect:"9/16",hue:"a",
     format:"TIKTOK · ORIGINAL POST",
-    overview:"An out-of-home moment — an Embark poster spotted at a Kacey Musgraves concert — turned into organic content. <a href=\"https://www.tiktok.com/@embarkvet/video/7062458914624818478?lang=en\" target=\"_blank\" rel=\"noopener\">View the original post →</a>",
-    role:["Concept & Execution"]
+    overview:"At a Kacey Musgraves concert, I brought an Embark Dog DNA Test kit and a sign referencing her dog, Pepper, hoping to catch her attention during the show's audience-interaction segment. It worked, and the moment that followed traveled a lot further than the arena. <a href=\"https://www.tiktok.com/@embarkvet/video/7062458914624818478?lang=en\" target=\"_blank\" rel=\"noopener\">View the original post →</a>",
+    strategy:"Make the connection to Kacey specific, not generic. Instead of just holding up a company sign, bring the actual Embark kit and tie it directly to Pepper, so the moment would only make sense as something meant just for her.",
+    execution:"Kacey picked me out of the crowd, then the moment took a turn of its own: she spotted my mom recording behind me and said, “Actually, I want your mom to pick this song.” Embark ended up on the jumbotron in front of roughly 20,000 people, not through a paid placement, but because the pitch was personal enough to earn its own spotlight. The TikTok I posted afterward picked up about 20K views on its own, but the real signal was everything that happened off-platform: concertgoers with no connection to Embark texting people they knew there, execs discovering it through Slack instead of a report, strangers posting their own clips. That's the whole case for a stunt like this: when the connection is specific enough, the audience does the distribution for you.",
+    labelOverrides:{execution:"What Happened"},
+    results:[
+      {stat:"20K+",label:"organic TikTok views"},
+      {stat:"~20,000",label:"concertgoers who saw it live"},
+      {stat:"Company-wide",label:"buzz across Slack, employee texts from strangers, and random tweets"}
+    ],
+    role:["Concept","On-the-Ground Execution","Organic Social Amplification"],
+    gallery:[
+      {ratio:"920/946",format:"PHOTO",label:"The Sign",hue:"d",caption:"The handmade sign and Embark kit, made specifically for Pepper",media:{type:"image", src:"kacey-musgraves-sign.jpg"}},
+      {ratio:"9/16",format:"CONCERT · JUMBOTRON",label:"On the Jumbotron",hue:"b",caption:"The kit on the jumbotron in front of about 20,000 people",media:{type:"video", src:"kacey-musgraves-jumbotron.mp4", poster:"kacey-musgraves-jumbotron-poster.jpg"}}
+    ]
   },
   {
     id:"swab-surprise-part-2",
@@ -1640,8 +1653,9 @@ function viewProject(id){
     const text = p[meta.key];
     if(!text) return "";
     sectionCount++;
+    const title = (p.labelOverrides && p.labelOverrides[meta.key]) || meta.title;
     return `<div class="proj-block ${n===5?'full':''}">
-      <span class="eyebrow"><span class="idx">${String(sectionCount).padStart(2,'0')} ›</span> ${meta.title}</span>
+      <span class="eyebrow"><span class="idx">${String(sectionCount).padStart(2,'0')} ›</span> ${title}</span>
       <p>${text}</p>
       ${n===5 ? galleryHTML(p) : ""}
     </div>`;
