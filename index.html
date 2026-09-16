@@ -948,12 +948,10 @@ const PROJECTS = [
     tags:["Organic Social"],
     size:"sm",aspect:"9/16",hue:"e",
     format:"TIKTOK · 9:16",
-    overview:"Leaning into the suspense already built into a breed reveal, instead of explaining it away. One of Embark's better-performing organic uploads, and one that moved the needle on-site the same day it went up.",
-    challenge:"Breed-reveal content was being shot like a product demo: informative, but not tense or emotional, which is what the moment naturally is.",
-    insight:"The reveal is already a mini cliffhanger. Owners had spent weeks wondering, and that suspense, not the results screen itself, is the actual content. What made the footage compelling wasn't the breed results themselves, it was the emotion behind them.",
-    strategy:"Direct for the emotional beat instead of the informational one. Hold the moment, let the reaction breathe, and cut the explanation.",
-    concept:"A single reaction video built around anticipation and payoff. I deliberately left out a reference picture of the dog so viewers experience the reveal the way the owner did, through the reaction, not the information.",
-    execution:"Edited into a fast-paced, social-first story, intentionally leaving out any reference image of the dog so the payoff lands through the owner's genuine, emotional reaction rather than a graphic.",
+    overview:"Leaning into the emotion already built into a breed reveal, instead of explaining it away. One of Embark's better-performing organic uploads, and one that moved the needle on-site the same day it went up.",
+    insight:"Breed-reveal content was usually shot like a product demo, informative but flat. What actually made people stop and watch wasn't the breed results themselves, it was the emotion behind them, and the way viewers connected with the dog owner's genuine reaction in the moment.",
+    strategy:"Direct for that emotional beat instead of the informational one. Build a single reaction video around anticipation and payoff, deliberately leaving out a reference picture of the dog so viewers experience the reveal exactly as the owner did.",
+    execution:"Edited fast-paced and social-first, holding the moment and letting the reaction breathe, cutting the explanation entirely so the payoff lands through raw, authentic emotion.",
     results:[
       {stat:"430K+",label:"organic views"},
       {stat:"10%",label:"of total website traffic driven the day it published"}
@@ -1636,12 +1634,14 @@ function viewProject(id){
   const backHref = p.isPlayground ? "#/playground" : "#/work";
   const backLabel = p.isPlayground ? "← Playground" : "← Work";
 
+  let sectionCount = 0;
   const blocks = [1,2,3,4,5].map(n=>{
     const meta = labelSet[n];
     const text = p[meta.key];
     if(!text) return "";
+    sectionCount++;
     return `<div class="proj-block ${n===5?'full':''}">
-      <span class="eyebrow"><span class="idx">0${n} ›</span> ${meta.title}</span>
+      <span class="eyebrow"><span class="idx">${String(sectionCount).padStart(2,'0')} ›</span> ${meta.title}</span>
       <p>${text}</p>
       ${n===5 ? galleryHTML(p) : ""}
     </div>`;
@@ -1649,7 +1649,7 @@ function viewProject(id){
 
   const resultsHTML = (p.results && p.results.length) ? `
     <div class="proj-block full">
-      <span class="eyebrow"><span class="idx">06 ›</span> ${p.isPlayground?"Why It Matters":"The Results"}</span>
+      <span class="eyebrow"><span class="idx">${String(sectionCount+1).padStart(2,'0')} ›</span> ${p.isPlayground?"Why It Matters":"The Results"}</span>
       <div class="results-band">
         ${p.results.map(r=>`<div class="result-tile"><span class="stat">${r.stat}</span><span class="label">${r.label}</span></div>`).join("")}
       </div>
