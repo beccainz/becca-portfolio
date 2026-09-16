@@ -2,15 +2,15 @@
 
 A no-build-step portfolio site (Home, Work, Playground, About) built with plain HTML/CSS/JS. Hash-based routing means it works as a static site with zero server configuration, perfect for GitHub Pages.
 
-This download includes `index.html` plus four media files (two videos, two poster images) that sit right next to it, at the same level, not inside a subfolder. GitHub's drag-and-drop upload doesn't reliably preserve folder structure, so keeping everything flat avoids that entirely.
+This download includes `index.html` plus all of the video and poster-image files it references, sitting right next to it at the same level, not inside a subfolder. GitHub's drag-and-drop upload doesn't reliably preserve folder structure, so keeping everything flat avoids that entirely.
 
 ## Publish it to GitHub Pages
 
 1. **Create a repository on GitHub.**
    Go to [github.com/new](https://github.com/new), name it something like `becca-portfolio`, and create it (public, so Pages can serve it for free).
 
-2. **Add all five files to the repo.**
-   Unzip this download, then on the repo's main page click "Add file" → "Upload files," and drag in `index.html` and all four media files together, in one drop (don't drag the folder itself, drag the files inside it). Scroll down and commit.
+2. **Add all the files to the repo.**
+   Unzip this download, then on the repo's main page click "Add file" → "Upload files," and drag in every file inside the unzipped folder together, in one drop (don't drag the folder itself, drag the files inside it — GitHub's uploader may split a large batch into a couple of drops if it complains about size, that's fine, just keep going until everything's in). Scroll down and commit.
 
 3. **Turn on GitHub Pages.**
    In the repo, go to **Settings → Pages**. Under "Build and deployment," set **Source** to "Deploy from a branch," pick the **`main`** branch and the **`/ (root)`** folder, then save.
@@ -49,7 +49,7 @@ The site ships with placeholder color blocks standing in for real creative on pr
 
 4. **Change your headshot.** Search `index.html` for `const PORTRAIT`, it's currently set to an embedded photo. Replace the whole line with a new photo the same way as above, or with `const PORTRAIT = {type:"image", src:"new-portrait.jpg"};` after uploading that file.
 
-A couple of practical notes: GitHub's web uploader tops out around 25MB per file, so compress video before uploading (most phone-shot clips will need it, a quick pass through HandBrake or a similar free compressor works well; the two videos already in this site were compressed that way). Keep videos reasonably short and compressed for load times, since nothing here streams or lazy-loads video. Leaving `media` off (or set to `null`) keeps the placeholder block, so you can migrate project by project.
+A couple of practical notes: GitHub's web uploader tops out around 25MB per file, so compress video before uploading (most phone-shot clips will need it, a quick pass through HandBrake or a similar free compressor works well; every video already in this site was compressed that way). Keep videos reasonably short and compressed for load times, since nothing here streams or lazy-loads video. Leaving `media` off (or set to `null`) keeps the placeholder block, so you can migrate project by project.
 
 A few other things worth knowing before sharing the live link widely:
 - **Years** on each project are placeholder estimates, double-check them against your records.
