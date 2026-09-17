@@ -755,6 +755,67 @@ button.chip:hover{border-color:var(--ink);}
 .proj-nextrow a:hover .arrow{background:var(--ink);color:var(--bg);transform:translateX(4px);}
 
 /* ============================================================
+   DECK VIEWER (click-through slide deck embedded on a project page)
+   ============================================================ */
+.deck-viewer{margin-top:20px;}
+.deck-stage{
+  position:relative;
+  width:100%;
+  aspect-ratio:16/9;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  overflow:hidden;
+  background:#fff;
+}
+.deck-stage img.deck-slide-img{
+  width:100%;height:100%;object-fit:contain;display:block;
+  user-select:none;
+}
+.deck-arrow{
+  position:absolute;top:50%;transform:translateY(-50%);
+  width:40px;height:40px;border-radius:99px;
+  background:color-mix(in srgb, #14120F 78%, transparent);
+  color:#F4EEE2;
+  display:flex;align-items:center;justify-content:center;
+  font-size:18px;line-height:1;
+  transition:background .15s ease, transform .15s ease;
+}
+.deck-arrow:hover{background:#14120F;}
+.deck-arrow:active{transform:translateY(-50%) scale(0.94);}
+.deck-prev{left:12px;}
+.deck-next{right:12px;}
+.deck-counter{
+  position:absolute;bottom:12px;right:14px;
+  font-family:var(--mono);font-size:11px;letter-spacing:.05em;
+  background:color-mix(in srgb, #14120F 78%, transparent);
+  color:#F4EEE2;
+  padding:5px 10px;border-radius:99px;
+  pointer-events:none;
+}
+.deck-hint{
+  position:absolute;bottom:12px;left:14px;
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;
+  color:#F4EEE2;
+  background:color-mix(in srgb, #14120F 78%, transparent);
+  padding:5px 10px;border-radius:99px;
+  pointer-events:none;
+}
+@media (max-width:600px){ .deck-hint{display:none;} }
+.deck-thumbs{
+  display:flex;gap:8px;overflow-x:auto;margin-top:12px;padding-bottom:4px;
+}
+.deck-thumb{
+  flex:none;width:92px;border-radius:2px;overflow:hidden;
+  border:2px solid transparent;opacity:.5;
+  transition:opacity .15s ease,border-color .15s ease;
+  background:#fff;
+}
+.deck-thumb img{width:100%;display:block;}
+.deck-thumb.active{opacity:1;border-color:var(--accent);}
+.deck-thumb:hover{opacity:0.85;}
+@media (max-width:600px){ .deck-thumb{width:60px;} .deck-arrow{width:34px;height:34px;font-size:15px;} }
+
+/* ============================================================
    ABOUT
    ============================================================ */
 .about-grid{
@@ -994,7 +1055,7 @@ const PROJECTS = [
     projectType:["Client Work"],
     workType:["Organic Social","OOH"],
     tags:["Organic Social","OOH"],
-    size:"md",aspect:"9/16",hue:"a",
+    size:"sm",aspect:"9/16",hue:"a",
     format:"TIKTOK · ORIGINAL POST",
     overview:"At a Kacey Musgraves concert, I brought an Embark Dog DNA Test kit and a sign referencing her dog, Pepper, hoping to catch her attention during the show's audience-interaction segment. It worked, and the moment that followed traveled a lot further than the arena. <a href=\"https://www.tiktok.com/@embarkvet/video/7062458914624818478?lang=en\" target=\"_blank\" rel=\"noopener\">View the original post →</a>",
     strategy:"Make the connection to Kacey specific, not generic. Instead of just holding up a company sign, bring the actual Embark kit and tie it directly to Pepper, so the moment would only make sense as something meant just for her.",
@@ -1042,6 +1103,54 @@ const PROJECTS = [
     size:"sm",aspect:"576/714",hue:"c",
     format:"INSTAGRAM · REEL",
     overview:"This dog was already circulating in other tweets and memes, so I leveraged it to fit Embark's own customer journey (breed curiosity, an owner not knowing their dog's breed, dog confusion). Made for paid social, it performed well enough, and got strong enough comments, that the organic team picked it up too, where it also performed well. <a href=\"https://www.instagram.com/reel/DCSmZfLs0eG/\" target=\"_blank\" rel=\"noopener\">View the original post →</a>",
+    role:["Concept & Execution"]
+  },
+  {
+    id:"meme-dna-sale-lab",
+    section:"Content",
+    media:{type:"image", src:"meme-dna-sale-lab.jpg"},
+    title:"“Waiting To Realize DNA Tests Are On Sale” Meme",
+    client:"Embark Vet",
+    year:2025,
+    isPlayground:false,
+    projectType:["Client Work"],
+    workType:["Paid Social","Organic Social"],
+    tags:["Paid Social","Organic Social"],
+    size:"sm",aspect:"4/5",hue:"a",
+    format:"INSTAGRAM · MEME",
+    overview:"A new meme concept and format I tested and brought to the paid social program, one of our strongest revenue-driving assets during Holiday 2025.",
+    role:["Concept & Execution"]
+  },
+  {
+    id:"meme-dna-sale-puppy",
+    section:"Content",
+    media:{type:"image", src:"meme-dna-sale-puppy.jpg"},
+    title:"“Waiting To Realize DNA Tests Are On Sale” Meme, Puppy Version",
+    client:"Embark Vet",
+    year:2025,
+    isPlayground:false,
+    projectType:["Client Work"],
+    workType:["Paid Social","Organic Social"],
+    tags:["Paid Social","Organic Social"],
+    size:"sm",aspect:"4/5",hue:"b",
+    format:"INSTAGRAM · MEME",
+    overview:"A second execution of the same meme concept, tested and brought to the paid social program, one of our strongest revenue-driving assets during Holiday 2025.",
+    role:["Concept & Execution"]
+  },
+  {
+    id:"meme-meeting-email",
+    section:"Content",
+    media:{type:"image", src:"meme-meeting-email.jpg"},
+    title:"“This Meeting Could Have Been An Email” Meme",
+    client:"Embark Vet",
+    year:2025,
+    isPlayground:false,
+    projectType:["Client Work"],
+    workType:["Paid Social","Organic Social"],
+    tags:["Paid Social","Organic Social"],
+    size:"sm",aspect:"4/5",hue:"d",
+    format:"INSTAGRAM · MEME",
+    overview:"A new meme concept and format I tested and brought to the paid social program, one of our strongest revenue-driving assets during Holiday 2025.",
     role:["Concept & Execution"]
   },
   {
@@ -1142,6 +1251,26 @@ const PROJECTS = [
     overview:"A paid creator partnership built around @thefitnessmarshall's fitness-routine content, owning the full process end to end: video concept, sending the kit, the creative brief, feedback and edits, and making sure it posted correctly with UTMs in place, all while keeping it feeling natural to his audience rather than like an ad. <a href=\"https://www.instagram.com/reels/DUbShFoAT5l/\" target=\"_blank\" rel=\"noopener\">View the original post →</a>",
     role:["Concept & Execution"]
   },
+  {
+    id:"leeasher-partnership",
+    section:"Partnerships",
+    media:{type:"video", src:"leeasher-partnership.mp4", poster:"leeasher-partnership-poster.jpg"},
+    title:"@LeeAsher × Embark",
+    client:"Embark Vet",
+    year:2025,
+    isPlayground:false,
+    projectType:["Client Work"],
+    workType:["Paid Social","Influencer / Creator","Partnerships","Creative Strategy"],
+    tags:["Paid Social","Influencer / Creator","Creative Strategy"],
+    size:"sm",aspect:"9/16",hue:"e",
+    format:"INSTAGRAM · REEL",
+    overview:"A paid creator partnership built around @LeeAsher's holiday content, briefed to keep the Embark kit woven naturally into his own dogs and voice rather than feeling like a script. <a href=\"https://www.instagram.com/reels/DB1i2X8ym4Z/\" target=\"_blank\" rel=\"noopener\">View the original post →</a>",
+    results:[
+      {stat:"$2.7",label:"ROAS"},
+      {stat:"3.2M+",label:"views"}
+    ],
+    role:["Concept & Execution"]
+  },
 
   /* ---------------------- PLAYGROUND ---------------------- */
   {
@@ -1162,11 +1291,21 @@ const PROJECTS = [
     concept:"A three-part sequence (meet the thought, acknowledge the feeling, turn recognition into a first conversation) applied first to organic awareness moments, then to a paid social series, “Character Development,” reimagining iconic fictional characters through the conversations they might have with Ash. The recognizable messaging-app setup draws people in while the dialogue demonstrates Ash's emotional intelligence and tone; identities are implied rather than named to avoid IP issues. Extendable via pop-culture trendjacking and “guess the character” engagement posts.",
     execution:"Built as a full thought-exercise deck, including a mocked concept video explicitly labeled as illustrating creative direction rather than a polished final execution, then closed by applying the exact same audience-insight-first process to four real examples from my own career (Swab Surprise, the Emotional Breed Reveal, Embark's office-culture video, and creator partnerships) to show this is a consistent way I work, not a one-off pitch idea.",
     role:["Creative Strategy","Concept Development","Dialogue Concepting","Deck Design"],
-    gallery:[
-      {ratio:"4/5",format:"CONCEPT · SLIDE",label:"The Thesis",hue:"d",caption:"“Where do these thoughts naturally surface?” (placeholder, deck excerpt coming)"},
-      {ratio:"9/16",format:"CONCEPT · 9:16",label:"Character Development",hue:"e",caption:"Paid social concept: fictional characters in conversation with Ash (placeholder)"},
-      {ratio:"1/1",format:"CONCEPT · 1:1",label:"Guess The Character",hue:"a",caption:"Engagement-post variant (placeholder)"}
-    ]
+    deck:{
+      aspect:"16/9",
+      images:[
+        "deck-thought-exercise-ash-01.jpg",
+        "deck-thought-exercise-ash-02.jpg",
+        "deck-thought-exercise-ash-03.jpg",
+        "deck-thought-exercise-ash-04.jpg",
+        "deck-thought-exercise-ash-05.jpg",
+        "deck-thought-exercise-ash-06.jpg",
+        "deck-thought-exercise-ash-07.jpg",
+        "deck-thought-exercise-ash-08.jpg",
+        "deck-thought-exercise-ash-09.jpg",
+        "deck-thought-exercise-ash-10.jpg"
+      ]
+    }
   },
   {
     id:"skincare-personality",
@@ -1404,10 +1543,9 @@ function escapeHTML(s){ return (s||"").replace(/[&<>]/g,c=>({"&":"&amp;","<":"&l
 /* ============================================================
    VIEWS
    ============================================================ */
+const HOME_STRIP_IDS = ["swab-surprise","kacey-musgraves-poster","emotional-breed-reveal","fitnessmarshall-partnership","mommy-sound-trend"];
 function viewHome(){
-  const featured = PROJECTS.filter(p=>p.featured && !p.isPlayground);
-  const rest = PROJECTS.filter(p=>!p.isPlayground && !p.featured).slice(0,3);
-  const strip = [...featured, ...rest].slice(0,5);
+  const strip = HOME_STRIP_IDS.map(id=>byId(id)).filter(Boolean);
 
   return `
   <section class="wrap name-lockup">
@@ -1427,7 +1565,7 @@ function viewHome(){
       <div>
         <span class="script script-hi">Hi, I'm Becca :)</span>
         <h2 class="balance">A creative strategist who thinks in campaigns, not just content.</h2>
-        <p>I turn a real cultural insight into a concept, brief it for the format it actually lives in, and use what the data says to make the next round sharper, across organic and paid media channels (expertise in paid social, organic content, and partnerships).</p>
+        <p>I turn a real cultural insight into a concept, brief it for the format it actually lives in, and use what the data says to make the next round sharper, across organic and paid media channels (expertise in paid social, creative strategy, and partnerships).</p>
         <div class="intro-skills">
           ${["Creative Strategy","Paid Social","Organic Social","Creator Partnerships","Messaging & Hooks"].map(t=>chip(t)).join("")}
         </div>
@@ -1627,7 +1765,7 @@ function viewProject(id){
     return `<div class="proj-block ${n===5?'full':''}">
       <span class="eyebrow"><span class="idx">${String(sectionCount).padStart(2,'0')} ›</span> ${title}</span>
       <p>${text}</p>
-      ${n===5 ? galleryHTML(p) : ""}
+      ${n===5 ? (p.deck ? deckViewerHTML(p) : galleryHTML(p)) : ""}
     </div>`;
   }).join("");
 
@@ -1708,6 +1846,57 @@ function galleryHTML(p){
 }
 
 /* ============================================================
+   DECK VIEWER — click-through slide-deck component for a project
+   page. p.deck = {images:[...filenames in order], aspect:"16/9"}
+   ============================================================ */
+function deckViewerHTML(p){
+  if(!p.deck || !p.deck.images || !p.deck.images.length) return "";
+  const imgs = p.deck.images;
+  return `<div class="deck-viewer" data-deck data-count="${imgs.length}">
+    <div class="deck-stage" style="aspect-ratio:${p.deck.aspect||'16/9'}">
+      <img class="deck-slide-img" data-deck-img src="${imgs[0]}" alt="Slide 1 of ${imgs.length}" draggable="false">
+      <button type="button" class="deck-arrow deck-prev" data-deck-prev aria-label="Previous slide">‹</button>
+      <button type="button" class="deck-arrow deck-next" data-deck-next aria-label="Next slide">›</button>
+      <span class="deck-hint">Use ← → to browse</span>
+      <span class="deck-counter" data-deck-counter>1 / ${imgs.length}</span>
+    </div>
+    <div class="deck-thumbs" data-deck-thumbs>
+      ${imgs.map((src,i)=>`<button type="button" class="deck-thumb ${i===0?'active':''}" data-deck-thumb="${i}" aria-label="Go to slide ${i+1}"><img src="${src}" alt="" draggable="false"></button>`).join("")}
+    </div>
+  </div>`;
+}
+let deckKeyHandler = null;
+function initDeckViewer(p){
+  if(deckKeyHandler){ document.removeEventListener("keydown", deckKeyHandler); deckKeyHandler = null; }
+  if(!p || !p.deck) return;
+  const root = $("[data-deck]");
+  if(!root) return;
+  const imgs = p.deck.images;
+  const stageImg = root.querySelector("[data-deck-img]");
+  const counter = root.querySelector("[data-deck-counter]");
+  const thumbs = $$("[data-deck-thumb]", root);
+  let idx = 0;
+  function show(i){
+    idx = (i + imgs.length) % imgs.length;
+    stageImg.src = imgs[idx];
+    stageImg.alt = `Slide ${idx+1} of ${imgs.length}`;
+    counter.textContent = `${idx+1} / ${imgs.length}`;
+    thumbs.forEach((t,ti)=>t.classList.toggle("active", ti===idx));
+    const activeThumb = thumbs[idx];
+    if(activeThumb) activeThumb.scrollIntoView({block:"nearest",inline:"center",behavior:"smooth"});
+  }
+  root.querySelector("[data-deck-prev]").addEventListener("click", ()=>show(idx-1));
+  root.querySelector("[data-deck-next]").addEventListener("click", ()=>show(idx+1));
+  thumbs.forEach(t=>t.addEventListener("click", ()=>show(+t.dataset.deckThumb)));
+  deckKeyHandler = function(e){
+    if(!document.body.contains(root)){ document.removeEventListener("keydown", deckKeyHandler); deckKeyHandler = null; return; }
+    if(e.key==="ArrowLeft"){ show(idx-1); }
+    else if(e.key==="ArrowRight"){ show(idx+1); }
+  };
+  document.addEventListener("keydown", deckKeyHandler);
+}
+
+/* ============================================================
    ROUTER
    ============================================================ */
 const app = $("#app");
@@ -1767,6 +1956,7 @@ function route(){
   stopAllMedia();
   clearInterval(tickerTimer);
   closeMobileMenu();
+  if(deckKeyHandler){ document.removeEventListener("keydown", deckKeyHandler); deckKeyHandler = null; }
 
   if(parts.length===0){
     app.innerHTML = viewHome();
@@ -1785,6 +1975,7 @@ function route(){
   } else if(parts[0]==="project" && parts[1]){
     app.innerHTML = viewProject(parts[1]);
     setActiveNav(byId(parts[1])?.isPlayground ? "playground" : "work");
+    initDeckViewer(byId(parts[1]));
   } else {
     app.innerHTML = viewHome();
     setActiveNav("home");
