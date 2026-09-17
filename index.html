@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Becca Inz — creative strategist portfolio. Paid social, organic content, and creator partnerships.">
+<meta name="description" content="Becca Inz: creative strategist portfolio. Paid social, organic content, and creator partnerships.">
 <title>Becca Inz</title>
 <style>
 /* ============================================================
@@ -591,6 +591,16 @@ button.chip:hover{border-color:var(--ink);}
 }
 .filter-bar button.chip{padding:7px 13px;font-size:11px;}
 .archive-section{padding-bottom:clamp(60px,8vw,110px);}
+.work-section{margin-bottom:clamp(40px,6vw,64px);}
+.work-section:last-child{margin-bottom:0;}
+.work-section-head{
+  font-family:var(--serif);
+  font-weight:500;
+  font-size:clamp(1.3rem,2.2vw,1.7rem);
+  margin-bottom:18px;
+  padding-bottom:14px;
+  border-bottom:1px solid var(--line);
+}
 .count-note{
   font-family:var(--mono);font-size:11px;color:var(--ink-faint);
   margin:-8px 0 22px;
@@ -631,6 +641,9 @@ button.chip:hover{border-color:var(--ink);}
   border:1px solid var(--line);
   border-radius:var(--radius);
   overflow:hidden;
+  display:flex;
+  justify-content:center;
+  background:var(--bg-card);
 }
 
 .proj-body{
@@ -840,7 +853,7 @@ footer{
 
 <footer>
   <div class="wrap footer-row">
-    <span>© <span id="yr"></span> Becca Inz — Brooklyn, NY</span>
+    <span>© <span id="yr"></span> Becca Inz, Brooklyn, NY</span>
     <span>Built with intent, not a template.</span>
   </div>
 </footer>
@@ -880,6 +893,7 @@ footer{
 const PROJECTS = [
   {
     id:"swab-surprise",
+    section:"Viral Moments",
     media:{type:"video", src:"swab-surprise.mp4", poster:"swab-surprise-poster.jpg"},
     title:"Swab Surprise",
     client:"Embark Vet",
@@ -888,8 +902,8 @@ const PROJECTS = [
     featured:true,
     projectType:["Client Work","Case Study"],
     workType:["Organic Social","Creative Strategy","Campaigns"],
-    tags:["Organic Social","Creative Strategy"],
-    size:"md",aspect:"9/16",hue:"b",
+    tags:["Organic Social","Creative Strategy","Campaign"],
+    size:"sm",aspect:"9/16",hue:"b",
     format:"TIKTOK · 9:16",
     overview:"Turning a simple dog DNA test into a social-first surprise. On-the-street interviews were emerging as a high-performing organic format, especially when they created real curiosity, so I applied that same energy to a category people usually treat as clinical: dog DNA testing. The result was Swab Surprise, built around real dog owners and unexpected breed reveals, made to feel native to TikTok instead of like an ad.",
     challenge:"How do you make DNA testing feel like entertainment instead of a product demo? The usual pitch starts with the mechanics: swab your dog, send it in, get your results. I wanted the surprise itself to be the story, giving people a reason to stop scrolling before they even realized they were watching an ad.",
@@ -903,28 +917,32 @@ const PROJECTS = [
     ],
     role:["Concept","Casting & On-Set Direction","Caption & Hook Writing","UGC Series Expansion","Performance Tracking"],
     gallery:[
-      {ratio:"9/16",format:"TIKTOK · 9:16",label:"Final",hue:"b",caption:"Final upload",media:{type:"video", src:"swab-surprise.mp4", poster:"swab-surprise-poster.jpg"}},
       {ratio:"1/1",format:"COMMENTS · SCREENSHOT",label:"Reaction",hue:"a",caption:"Top comment screenshots, proof the reaction actually connected"},
-      {ratio:"9/16",format:"TIKTOK · 9:16",label:"UGC Contest",hue:"c",caption:"The Swab Surprise UGC contest, launched after the original video's success"}
+      {ratio:"9/16",format:"TIKTOK · ORIGINAL POST",label:"Part 2",hue:"b",caption:"Swab Surprise, Part 2: the follow-up finishing Loki's DNA journey after viewers kept asking for his actual results. <a href=\"https://www.tiktok.com/@embarkvet/video/7039504358467374383?lang=en\" target=\"_blank\" rel=\"noopener\">View →</a>",media:{type:"video", src:"swab-surprise-part-2.mp4", poster:"swab-surprise-part-2-poster.jpg"}},
+      {ratio:"9/16",format:"TIKTOK · ORIGINAL POST",label:"UGC Contest: Announcement",hue:"d",caption:"The announcement video turning the moment into an ongoing UGC contest, inviting fans to share their dog's origin story. <a href=\"https://www.tiktok.com/@embarkvet/video/7020897158203182341?lang=en\" target=\"_blank\" rel=\"noopener\">View →</a>",media:{type:"video", src:"swab-surprise-giveaway-announcement.mp4", poster:"swab-surprise-giveaway-announcement-poster.jpg"}},
+      {ratio:"9/16",format:"TIKTOK · ORIGINAL POST",label:"UGC Contest: Winner 1",hue:"e",caption:"One of three winners picked from the UGC contest. <a href=\"https://www.tiktok.com/@embarkvet/video/7025740254841818374?lang=en\" target=\"_blank\" rel=\"noopener\">View →</a>",media:{type:"video", src:"swab-surprise-giveaway-winner-1.mp4", poster:"swab-surprise-giveaway-winner-1-poster.jpg"}},
+      {ratio:"9/16",format:"TIKTOK · ORIGINAL POST",label:"UGC Contest: Winner 2",hue:"a",caption:"One of three winners picked from the UGC contest. <a href=\"https://www.tiktok.com/@embarkvet/video/7026077256816676101?lang=en\" target=\"_blank\" rel=\"noopener\">View →</a>",media:{type:"video", src:"swab-surprise-giveaway-winner-2.mp4", poster:"swab-surprise-giveaway-winner-2-poster.jpg"}},
+      {ratio:"288/623",format:"TIKTOK · ORIGINAL POST",label:"UGC Contest: Winner 3",hue:"b",caption:"One of three winners picked from the UGC contest. <a href=\"https://www.tiktok.com/@embarkvet/video/7027188026581241094?lang=en\" target=\"_blank\" rel=\"noopener\">View →</a>",media:{type:"video", src:"swab-surprise-giveaway-winner-3.mp4", poster:"swab-surprise-giveaway-winner-3-poster.jpg"}}
     ]
   },
   {
     id:"office-culture-make-sense",
+    section:"Viral Moments",
     media:{type:"video", src:"office-culture-make-sense.mp4", poster:"office-culture-make-sense-poster.jpg"},
     title:"#ThingsThatJustMakeSense Trend - Embark Office Version",
     client:"Embark Vet",
     year:2024,
     isPlayground:false,
     projectType:["Client Work"],
-    workType:["Organic Social","Employer Branding","Creative Strategy"],
-    tags:["Organic Social","Employer Branding"],
-    size:"sm",aspect:"1/1",hue:"d",
+    workType:["Organic Social","Employer Branding","Trend"],
+    tags:["Organic Social","Employer Branding","Trend"],
+    size:"sm",aspect:"9/16",hue:"d",
     format:"INSTAGRAM · TIKTOK",
-    overview:"Adapting a viral home-decor trend format to show off Embark's quirky, pet-friendly startup culture — an employer-branding moment that outperformed a traditional recruiting video, without ever looking like one.",
-    challenge:"Employer-branding content usually reads like a corporate video — produced, generic, and easy to skip. Embark needed a way to show off its actual pet-friendly, slightly weird office culture without it feeling like an HR ad.",
-    insight:"The “things in our home that just make sense” trend was already native to how people show off personality on Instagram and TikTok. That same structure could show off a workplace's personality just as well as someone's apartment — as long as it didn't feel adapted for recruiting.",
+    overview:"Adapting a viral home-decor trend format to show off Embark's quirky, pet-friendly startup culture: an employer-branding moment that outperformed a traditional recruiting video, without ever looking like one.",
+    challenge:"Employer-branding content usually reads like a corporate video, produced, generic, and easy to skip. Embark needed a way to show off its actual pet-friendly, slightly weird office culture without it feeling like an HR ad.",
+    insight:"The “things in our home that just make sense” trend was already native to how people show off personality on Instagram and TikTok. That same structure could show off a workplace's personality just as well as someone's apartment, as long as it didn't feel adapted for recruiting.",
     strategy:"Skip the traditional employer-branding video entirely and adapt the trend format itself, applying the same social-first, unpolished storytelling grammar to the office instead of a home.",
-    concept:"“Things At The Embark Office That Just ✨Make Sense✨” — a social-first video walking through quirky, pet-friendly office details using the trend's own visual and pacing conventions, not a scripted culture reel.",
+    concept:"“Things At The Embark Office That Just ✨Make Sense✨”: a social-first video walking through quirky, pet-friendly office details using the trend's own visual and pacing conventions, not a scripted culture reel.",
     execution:"Shot and cut natively to the trend format rather than dressed up as recruiting content, and posted organic on Instagram and TikTok.",
     results:[
       {stat:"40K+",label:"organic views"},
@@ -932,23 +950,21 @@ const PROJECTS = [
       {stat:"Featured",label:"on Embark's Careers page"}
     ],
     role:["Concept","Format Adaptation","Filming & Editing"],
-    gallery:[
-      {ratio:"9/16",format:"INSTAGRAM · TIKTOK",label:"Final",hue:"d",caption:"Final upload",media:{type:"video", src:"office-culture-make-sense.mp4", poster:"office-culture-make-sense-poster.jpg"}}
-    ]
   },
   {
     id:"emotional-breed-reveal",
+    section:"Viral Moments",
     media:{type:"video", src:"emotional-breed-reveal.mp4", poster:"emotional-breed-reveal-poster.jpg"},
     title:"The Emotional Breed Reveal (Embark's 1st “Viral” TikTok)",
     client:"Embark Vet",
     year:2023,
     isPlayground:false,
     projectType:["Client Work"],
-    workType:["Organic Social","Creative Strategy"],
+    workType:["Organic Social"],
     tags:["Organic Social"],
     size:"sm",aspect:"9/16",hue:"e",
     format:"TIKTOK · 9:16",
-    overview:"Leaning into the emotion already built into a breed reveal, instead of explaining it away. One of Embark's better-performing organic uploads, and one that moved the needle on-site the same day it went up.",
+    overview:"Leaning into the emotion already built into a breed reveal, instead of explaining it away. One of Embark's first viral videos, and one that moved the needle on-site the same day it went up.",
     insight:"Breed-reveal content was usually shot like a product demo, informative but flat. What actually made people stop and watch wasn't the breed results themselves, it was the emotion behind them, and the way viewers connected with the dog owner's genuine reaction in the moment.",
     strategy:"Direct for that emotional beat instead of the informational one. Build a single reaction video around anticipation and payoff, deliberately leaving out a reference picture of the dog so viewers experience the reveal exactly as the owner did.",
     execution:"Edited fast-paced and social-first, holding the moment and letting the reaction breathe, cutting the explanation entirely so the payoff lands through raw, authentic emotion.",
@@ -957,9 +973,6 @@ const PROJECTS = [
       {stat:"10%",label:"of total website traffic driven the day it published"}
     ],
     role:["Concept","Direction","Editing Notes"],
-    gallery:[
-      {ratio:"9/16",format:"TIKTOK · 9:16",label:"Final",hue:"e",caption:"Final upload",media:{type:"video", src:"emotional-breed-reveal.mp4", poster:"emotional-breed-reveal-poster.jpg"}}
-    ]
   },
 
   /* ----------------------------------------------------------
@@ -971,6 +984,7 @@ const PROJECTS = [
      ---------------------------------------------------------- */
   {
     id:"kacey-musgraves-poster",
+    section:"Viral Moments",
     media:{type:"video", src:"kacey-musgraves-poster.mp4", poster:"kacey-musgraves-poster-poster.jpg"},
     title:"I Got Kacey Musgraves Talking About Embark",
     client:"Embark Vet",
@@ -978,8 +992,8 @@ const PROJECTS = [
     isPlayground:false,
     featured:true,
     projectType:["Client Work"],
-    workType:["Organic Social","Creative Strategy"],
-    tags:["Organic Social","Creative Strategy","Guerrilla Marketing"],
+    workType:["Organic Social","OOH"],
+    tags:["Organic Social","OOH"],
     size:"md",aspect:"9/16",hue:"a",
     format:"TIKTOK · ORIGINAL POST",
     overview:"At a Kacey Musgraves concert, I brought an Embark Dog DNA Test kit and a sign referencing her dog, Pepper, hoping to catch her attention during the show's audience-interaction segment. It worked, and the moment that followed traveled a lot further than the arena. <a href=\"https://www.tiktok.com/@embarkvet/video/7062458914624818478?lang=en\" target=\"_blank\" rel=\"noopener\">View the original post →</a>",
@@ -998,97 +1012,24 @@ const PROJECTS = [
     ]
   },
   {
-    id:"swab-surprise-part-2",
-    media:{type:"video", src:"swab-surprise-part-2.mp4", poster:"swab-surprise-part-2-poster.jpg"},
-    title:"Swab Surprise, Part 2",
-    client:"Embark Vet",
-    year:2023,
-    isPlayground:false,
-    projectType:["Client Work"],
-    workType:["Organic Social","Creative Strategy","Campaigns"],
-    tags:["Organic Social","Creative Strategy","Campaign"],
-    size:"sm",aspect:"9/16",hue:"b",
-    format:"TIKTOK · ORIGINAL POST",
-    overview:"The payoff to the original Swab Surprise video — viewers had been asking what Loki's actual Embark results were, so this follow-up finishes his DNA journey and reveals the answer. <a href=\"https://www.tiktok.com/@embarkvet/video/7039504358467374383?lang=en\" target=\"_blank\" rel=\"noopener\">View the original post →</a>",
-    role:["Concept & Execution"]
-  },
-  {
     id:"mommy-sound-trend",
+    section:"Content",
     media:{type:"video", src:"mommy-sound-trend.mp4", poster:"mommy-sound-trend-poster.jpg"},
     title:"“I'm a Mommy” TikTok Sound Trend",
     client:"Embark Vet",
     year:2023,
     isPlayground:false,
     projectType:["Client Work"],
-    workType:["Paid Social"],
-    tags:["Paid Social","Trend"],
+    workType:["Organic Social","Trend"],
+    tags:["Organic Social","Trend"],
     size:"sm",aspect:"9/16",hue:"c",
     format:"TIKTOK · ORIGINAL POST",
-    overview:"Built paid social creative around the viral “I'm a mommy” sound from Love Island, keeping the ad feeling like a trend clip rather than a produced ad. <a href=\"https://www.tiktok.com/@embarkvet/video/7525649361414458679?lang=en\" target=\"_blank\" rel=\"noopener\">View the original post →</a>",
-    role:["Concept & Execution"]
-  },
-  {
-    id:"swab-surprise-giveaway-announcement",
-    media:{type:"video", src:"swab-surprise-giveaway-announcement.mp4", poster:"swab-surprise-giveaway-announcement-poster.jpg"},
-    title:"Swab Surprise UGC Contest: Announcement",
-    client:"Embark Vet",
-    year:2023,
-    isPlayground:false,
-    projectType:["Client Work"],
-    workType:["Organic Social","Campaigns","Creative Strategy"],
-    tags:["Organic Social","Campaign","Creative Strategy"],
-    size:"sm",aspect:"9/16",hue:"d",
-    format:"TIKTOK · ORIGINAL POST",
-    overview:"Announcement video turning the viral Swab Surprise moment into an ongoing UGC contest — inviting followers to share their dog's origin story and why they wanted a Swab Surprise Embark kit. <a href=\"https://www.tiktok.com/@embarkvet/video/7020897158203182341?lang=en\" target=\"_blank\" rel=\"noopener\">View the original post →</a>",
-    role:["Concept & Execution"]
-  },
-  {
-    id:"swab-surprise-giveaway-winner-1",
-    media:{type:"video", src:"swab-surprise-giveaway-winner-1.mp4", poster:"swab-surprise-giveaway-winner-1-poster.jpg"},
-    title:"Swab Surprise UGC Contest: Winner 1",
-    client:"Embark Vet",
-    year:2023,
-    isPlayground:false,
-    projectType:["Client Work"],
-    workType:["Organic Social","Campaigns","Creative Strategy"],
-    tags:["Organic Social","Campaign","Creative Strategy"],
-    size:"sm",aspect:"9/16",hue:"e",
-    format:"TIKTOK · ORIGINAL POST",
-    overview:"One of three winner announcements from the Swab Surprise UGC contest, where fans shared their dog's origin story for a chance to win an Embark Dog DNA Test. <a href=\"https://www.tiktok.com/@embarkvet/video/7025740254841818374?lang=en\" target=\"_blank\" rel=\"noopener\">View the original post →</a>",
-    role:["Concept & Execution"]
-  },
-  {
-    id:"swab-surprise-giveaway-winner-2",
-    media:{type:"video", src:"swab-surprise-giveaway-winner-2.mp4", poster:"swab-surprise-giveaway-winner-2-poster.jpg"},
-    title:"Swab Surprise UGC Contest: Winner 2",
-    client:"Embark Vet",
-    year:2023,
-    isPlayground:false,
-    projectType:["Client Work"],
-    workType:["Organic Social","Campaigns","Creative Strategy"],
-    tags:["Organic Social","Campaign","Creative Strategy"],
-    size:"sm",aspect:"9/16",hue:"a",
-    format:"TIKTOK · ORIGINAL POST",
-    overview:"One of three winner announcements from the Swab Surprise UGC contest, where fans shared their dog's origin story for a chance to win an Embark Dog DNA Test. <a href=\"https://www.tiktok.com/@embarkvet/video/7026077256816676101?lang=en\" target=\"_blank\" rel=\"noopener\">View the original post →</a>",
-    role:["Concept & Execution"]
-  },
-  {
-    id:"swab-surprise-giveaway-winner-3",
-    media:{type:"video", src:"swab-surprise-giveaway-winner-3.mp4", poster:"swab-surprise-giveaway-winner-3-poster.jpg"},
-    title:"Swab Surprise UGC Contest: Winner 3",
-    client:"Embark Vet",
-    year:2023,
-    isPlayground:false,
-    projectType:["Client Work"],
-    workType:["Organic Social","Campaigns","Creative Strategy"],
-    tags:["Organic Social","Campaign","Creative Strategy"],
-    size:"sm",aspect:"288/623",hue:"b",
-    format:"TIKTOK · ORIGINAL POST",
-    overview:"One of three winner announcements from the Swab Surprise UGC contest, where fans shared their dog's origin story for a chance to win an Embark Dog DNA Test. <a href=\"https://www.tiktok.com/@embarkvet/video/7027188026581241094?lang=en\" target=\"_blank\" rel=\"noopener\">View the original post →</a>",
+    overview:"Built organic content around the viral “I'm a mommy” sound from Love Island, keeping it feeling like a native trend clip rather than a produced ad. <a href=\"https://www.tiktok.com/@embarkvet/video/7525649361414458679?lang=en\" target=\"_blank\" rel=\"noopener\">View the original post →</a>",
     role:["Concept & Execution"]
   },
   {
     id:"greenscreen-tweet-meme",
+    section:"Content",
     media:{type:"video", src:"greenscreen-tweet-meme.mp4", poster:"greenscreen-tweet-meme-poster.jpg"},
     title:"Greenscreen Tweet UGC Meme Video",
     client:"Embark Vet",
@@ -1104,36 +1045,39 @@ const PROJECTS = [
   },
   {
     id:"tori-nishino-bonbon",
+    section:"Partnerships",
     media:{type:"video", src:"tori-nishino-bonbon.mp4", poster:"tori-nishino-bonbon-poster.jpg"},
     title:"@Torinishino x Embark",
     client:"Embark Vet",
     year:2023,
     isPlayground:false,
     projectType:["Client Work"],
-    workType:["Paid Social","Influencer / Creator","Creative Strategy"],
+    workType:["Paid Social","Influencer / Creator","Partnerships","Creative Strategy"],
     tags:["Paid Social","Influencer / Creator","Creative Strategy"],
     size:"sm",aspect:"9/16",hue:"d",
     format:"INSTAGRAM · REEL",
-    overview:"A paid creator partnership built around Tori Nishino's dog, BonBon — owning the full process end to end: video concept, sending the kit, the creative brief, feedback and edits, and making sure it posted correctly with UTMs in place, all while keeping the content feeling natural to her audience rather than like an ad. <a href=\"https://www.instagram.com/reel/CzHdI7NSixZ/\" target=\"_blank\" rel=\"noopener\">View the original post →</a>",
+    overview:"A paid creator partnership built around Tori Nishino's dog, BonBon, owning the full process end to end: video concept, sending the kit, the creative brief, feedback and edits, and making sure it posted correctly with UTMs in place, all while keeping the content feeling natural to her audience rather than like an ad. <a href=\"https://www.instagram.com/reel/CzHdI7NSixZ/\" target=\"_blank\" rel=\"noopener\">View the original post →</a>",
     role:["Concept & Execution"]
   },
   {
     id:"dogs-of-instagram-relative-finder",
+    section:"Partnerships",
     media:{type:"video", src:"dogs-of-instagram-relative-finder.mp4", poster:"dogs-of-instagram-relative-finder-poster.jpg"},
     title:"Dogs Of Instagram: Relative Finder Story",
     client:"Embark Vet",
     year:2023,
     isPlayground:false,
     projectType:["Client Work"],
-    workType:["Influencer / Creator","Paid Social"],
+    workType:["Paid Social","Influencer / Creator","Partnerships"],
     tags:["Influencer / Creator","Paid Social"],
     size:"sm",aspect:"240/427",hue:"e",
     format:"INSTAGRAM · REEL",
-    overview:"A paid partnership with the widely popular Dogs Of Instagram account, featuring one of their own employees' genuine, heartwarming Embark customer story — using the relative-finder feature to find their dog's sibling. <a href=\"https://www.instagram.com/reel/CwVVSRoA5dt/\" target=\"_blank\" rel=\"noopener\">View the original post →</a>",
+    overview:"A paid partnership with the widely popular Dogs Of Instagram account, featuring one of their own employees' genuine, heartwarming Embark customer story, using the relative-finder feature to find their dog's sibling. <a href=\"https://www.instagram.com/reel/CwVVSRoA5dt/\" target=\"_blank\" rel=\"noopener\">View the original post →</a>",
     role:["Concept & Execution"]
   },
   {
     id:"mamma-mia-ab-test",
+    section:"Content",
     media:{type:"video", src:"mamma-mia-ab-test.mp4", poster:"mamma-mia-ab-test-poster.jpg"},
     title:"Westminster Goldens Video Edit A/B Test",
     client:"Embark Vet",
@@ -1144,13 +1088,14 @@ const PROJECTS = [
     tags:["Organic Social"],
     size:"sm",aspect:"9/16",hue:"a",
     format:"INSTAGRAM · REEL",
-    overview:"A quick A/B test on TikTok — two cuts of the same clip, one zoomed in on the dog jumping up and down, one left un-zoomed. The un-zoomed version won by a wide margin, gaining hundreds of thousands of organic views.",
-    insight:"Viewers want to feel like they noticed the funny dog behavior themselves, rather than having it pointed out for them — people like to feel observant on their own. <a href=\"https://www.instagram.com/reel/CqalVClDdTP/\" target=\"_blank\" rel=\"noopener\">View the original post →</a>",
+    overview:"A quick A/B test on TikTok: two cuts of the same clip, one zoomed in on the dog jumping up and down, one left un-zoomed. The un-zoomed version won by a wide margin, gaining hundreds of thousands of organic views.",
+    insight:"Viewers want to feel like they noticed the funny dog behavior themselves, rather than having it pointed out for them. People like to feel observant on their own. <a href=\"https://www.instagram.com/reel/CqalVClDdTP/\" target=\"_blank\" rel=\"noopener\">View the original post →</a>",
     results:[{stat:"100Ks",label:"organic views on the winning (un-zoomed) cut"}],
     role:["Concept & Execution"]
   },
   {
     id:"meglovesdata-partnership",
+    section:"Partnerships",
     media:{type:"video", src:"meglovesdata-partnership.mp4", poster:"meglovesdata-partnership-poster.jpg"},
     title:"@Meglovesdata × Embark",
     client:"Embark Vet",
@@ -1159,30 +1104,32 @@ const PROJECTS = [
     projectType:["Client Work"],
     workType:["Paid Social","Influencer / Creator","Partnerships","Creative Strategy"],
     tags:["Paid Social","Influencer / Creator","Creative Strategy"],
-    size:"sm",aspect:"4/5",hue:"b",
-    format:"INSTAGRAM · POST",
+    size:"sm",aspect:"9/16",hue:"b",
+    format:"INSTAGRAM · REEL",
     overview:"A paid creator partnership built around @Meglovesdata's data-driven lifestyle content, briefed around her existing voice rather than a script so the partnership felt native to her audience. <a href=\"https://www.instagram.com/p/DVg0o3CkZvM/\" target=\"_blank\" rel=\"noopener\">View the original post →</a>",
     role:["Concept & Execution"]
   },
   {
     id:"daniellebuilds-partnership",
+    section:"Partnerships",
     media:{type:"video", src:"daniellebuilds-partnership.mp4", poster:"daniellebuilds-partnership-poster.jpg"},
-    title:"@DanielleBuilds × Embark",
+    title:"@DanielleBuilds SIMS creator × Embark",
     client:"Embark Vet",
     year:2023,
     isPlayground:false,
     projectType:["Client Work"],
     workType:["Paid Social","Influencer / Creator","Partnerships","Creative Strategy"],
     tags:["Paid Social","Influencer / Creator","Creative Strategy"],
-    size:"sm",aspect:"4/5",hue:"c",
-    format:"INSTAGRAM · POST",
-    overview:"A paid creator partnership built around @DanielleBuilds' home/DIY content, briefed around her existing voice rather than a script so the partnership felt native to her audience. <a href=\"https://www.instagram.com/p/DQuWtvTD_Q8/\" target=\"_blank\" rel=\"noopener\">View the original post →</a>",
+    size:"sm",aspect:"9/16",hue:"c",
+    format:"INSTAGRAM · REEL",
+    overview:"A paid creator partnership built around @DanielleBuilds' Sims-focused content, briefed around her existing voice rather than a script so the partnership felt native to her audience. <a href=\"https://www.instagram.com/p/DQuWtvTD_Q8/\" target=\"_blank\" rel=\"noopener\">View the original post →</a>",
     role:["Concept & Execution"]
   },
   {
     id:"fitnessmarshall-partnership",
+    section:"Partnerships",
     media:{type:"video", src:"fitnessmarshall-partnership.mp4", poster:"fitnessmarshall-partnership-poster.jpg"},
-    title:"@thisfitnessmarshall × Embark",
+    title:"@thefitnessmarshall × Embark",
     client:"Embark Vet",
     year:2023,
     isPlayground:false,
@@ -1191,7 +1138,7 @@ const PROJECTS = [
     tags:["Paid Social","Influencer / Creator","Creative Strategy"],
     size:"sm",aspect:"9/16",hue:"d",
     format:"INSTAGRAM · REEL",
-    overview:"A paid creator partnership built around @thisfitnessmarshall's fitness-routine content — owning the full process end to end: video concept, sending the kit, the creative brief, feedback and edits, and making sure it posted correctly with UTMs in place, all while keeping it feeling natural to his audience rather than like an ad. <a href=\"https://www.instagram.com/reels/DUbShFoAT5l/\" target=\"_blank\" rel=\"noopener\">View the original post →</a>",
+    overview:"A paid creator partnership built around @thefitnessmarshall's fitness-routine content, owning the full process end to end: video concept, sending the kit, the creative brief, feedback and edits, and making sure it posted correctly with UTMs in place, all while keeping it feeling natural to his audience rather than like an ad. <a href=\"https://www.instagram.com/reels/DUbShFoAT5l/\" target=\"_blank\" rel=\"noopener\">View the original post →</a>",
     role:["Concept & Execution"]
   },
 
@@ -1208,16 +1155,16 @@ const PROJECTS = [
     size:"lg",aspect:"4/5",hue:"d",
     format:"THOUGHT EXERCISE",
     overview:"A speculative creative-strategy exercise for Ash exploring how the brand could build awareness by meeting people at the moment a relevant thought first surfaces, instead of simply buying reach.",
-    challenge:"Most marketing starts from a media question — “where can we reach our audience?” For a product like Ash, an AI companion people turn to for something personal, the real barrier isn't reach, it's the vulnerability of a first conversation.",
+    challenge:"Most marketing starts from a media question: “where can we reach our audience?” For a product like Ash, an AI companion people turn to for something personal, the real barrier isn't reach, it's the vulnerability of a first conversation.",
     insight:"The better starting question isn't where you can reach people, it's where the relevant thought already surfaces on its own. If you can meet someone there, acknowledge what they're feeling, and make that moment feel like the start of their first real conversation with the product, awareness and trust happen in the same beat.",
-    strategy:"Design placements and creative devices around real moments where the thought already occurs — a conversation, a cultural reference, a recognizable format — instead of interrupting attention with a generic ad, then extend the same logic into paid social with a recognizable, native format.",
-    concept:"A three-part sequence (meet the thought, acknowledge the feeling, turn recognition into a first conversation) applied first to organic awareness moments, then to a paid social series, “Character Development” — reimagining iconic fictional characters through the conversations they might have with Ash. The recognizable messaging-app setup draws people in while the dialogue demonstrates Ash's emotional intelligence and tone; identities are implied rather than named to avoid IP issues. Extendable via pop-culture trendjacking and “guess the character” engagement posts.",
-    execution:"Built as a full thought-exercise deck, including a mocked concept video explicitly labeled as illustrating creative direction rather than a polished final execution — then closed by applying the exact same audience-insight-first process to four real examples from my own career (Swab Surprise, the Emotional Breed Reveal, Embark's office-culture video, and creator partnerships) to show this is a consistent way I work, not a one-off pitch idea.",
+    strategy:"Design placements and creative devices around real moments where the thought already occurs (a conversation, a cultural reference, a recognizable format) instead of interrupting attention with a generic ad, then extend the same logic into paid social with a recognizable, native format.",
+    concept:"A three-part sequence (meet the thought, acknowledge the feeling, turn recognition into a first conversation) applied first to organic awareness moments, then to a paid social series, “Character Development,” reimagining iconic fictional characters through the conversations they might have with Ash. The recognizable messaging-app setup draws people in while the dialogue demonstrates Ash's emotional intelligence and tone; identities are implied rather than named to avoid IP issues. Extendable via pop-culture trendjacking and “guess the character” engagement posts.",
+    execution:"Built as a full thought-exercise deck, including a mocked concept video explicitly labeled as illustrating creative direction rather than a polished final execution, then closed by applying the exact same audience-insight-first process to four real examples from my own career (Swab Surprise, the Emotional Breed Reveal, Embark's office-culture video, and creator partnerships) to show this is a consistent way I work, not a one-off pitch idea.",
     role:["Creative Strategy","Concept Development","Dialogue Concepting","Deck Design"],
     gallery:[
-      {ratio:"4/5",format:"CONCEPT · SLIDE",label:"The Thesis",hue:"d",caption:"“Where do these thoughts naturally surface?” — placeholder, deck excerpt coming"},
-      {ratio:"9/16",format:"CONCEPT · 9:16",label:"Character Development",hue:"e",caption:"Paid social concept — fictional characters in conversation with Ash — placeholder"},
-      {ratio:"1/1",format:"CONCEPT · 1:1",label:"Guess The Character",hue:"a",caption:"Engagement-post variant — placeholder"}
+      {ratio:"4/5",format:"CONCEPT · SLIDE",label:"The Thesis",hue:"d",caption:"“Where do these thoughts naturally surface?” (placeholder, deck excerpt coming)"},
+      {ratio:"9/16",format:"CONCEPT · 9:16",label:"Character Development",hue:"e",caption:"Paid social concept: fictional characters in conversation with Ash (placeholder)"},
+      {ratio:"1/1",format:"CONCEPT · 1:1",label:"Guess The Character",hue:"a",caption:"Engagement-post variant (placeholder)"}
     ]
   },
   {
@@ -1231,15 +1178,15 @@ const PROJECTS = [
     tags:["Campaign Concept","Culture","Self-Initiated"],
     size:"md",aspect:"4/5",hue:"c",
     format:"CONCEPT · CAMPAIGN",
-    overview:"A speculative campaign for a Gen Z skincare brand that treats each step of a routine as a character with its own voice — built to be native to how skincare already gets talked about on TikTok.",
+    overview:"A speculative campaign for a Gen Z skincare brand that treats each step of a routine as a character with its own voice, built to be native to how skincare already gets talked about on TikTok.",
     challenge:"Skincare marketing over-explains ingredients to an audience that already talks about routines like a cast of characters (“my serum is doing the most,” “niacinamide is not it today”).",
     insight:"Gen Z already personifies their routine in captions and comments. No brand has built a campaign that formalizes that instinct instead of fighting it with ingredient copy.",
-    strategy:"Give each step of a routine a distinct personality and let the “cast” argue, flirt, and compete for screen time — comedy first, product education folded in as a side effect.",
+    strategy:"Give each step of a routine a distinct personality and let the “cast” argue, flirt, and compete for screen time: comedy first, product education folded in as a side effect.",
     concept:"A five-part social series where each product in a routine is voiced as a character with a clashing personality, releasing in the order you'd actually apply them.",
     execution:"Concept, character voice, and a sample script for episode one, designed for a creator-led execution rather than studio production.",
     role:["Concept","Character/Voice Development","Script Sample","Format Design"],
     gallery:[
-      {ratio:"9/16",format:"CONCEPT · 9:16",label:"Ep. 1 script frame",hue:"c",caption:"Illustrative frame — not produced"},
+      {ratio:"9/16",format:"CONCEPT · 9:16",label:"Ep. 1 script frame",hue:"c",caption:"Illustrative frame, not produced"},
       {ratio:"1/1",format:"CONCEPT · 1:1",label:"Character sheet",hue:"a",caption:"Character personality reference sheet"}
     ]
   },
@@ -1255,9 +1202,9 @@ const PROJECTS = [
     size:"sm",aspect:"9/16",hue:"e",
     format:"CONCEPT · AD FORMAT",
     overview:"An ad format experiment exploring what happens when a paid unit is designed to look like a screenshot of a group chat, not a campaign asset.",
-    challenge:"Feed ads increasingly get skipped the instant they read as an ad — the tell is almost always the production polish, not the content.",
+    challenge:"Feed ads increasingly get skipped the instant they read as an ad. The tell is almost always the production polish, not the content.",
     insight:"The most-screenshotted, most-shared content in group chats is other screenshots of group chats. The format itself signals “real” before anyone reads a word of it.",
-    strategy:"Design the ad unit to be indistinguishable, at a glance, from a screenshot a friend would actually send — then let the product punchline land inside that format.",
+    strategy:"Design the ad unit to be indistinguishable, at a glance, from a screenshot a friend would actually send, then let the product punchline land inside that format.",
     concept:"A static paid social unit built entirely as a fake (clearly-labeled-as-concept) group chat exchange, with the product as the punchline of the last message.",
     execution:"Wireframed the format and message beats; flagged where platform ad-disclosure requirements would need to be designed in from the start.",
     role:["Concept","Format Design","Copy"],
@@ -1278,13 +1225,13 @@ const PROJECTS = [
     format:"CONCEPT · CONTENT PLAN",
     overview:"A hypothetical week of organic content for an independent coffee brand, built entirely around reacting to what's actually happening in culture that week rather than a pre-planned content calendar.",
     challenge:"Most brand social calendars are written a month out, which guarantees they miss whatever's actually being talked about the week they post.",
-    insight:"The accounts that feel most alive online aren't the best-produced — they're the fastest to notice something and have a genuine point of view on it within hours.",
-    strategy:"Replace the content calendar with a same-day response loop: scan, react, post, in that order — treating culture as the brief instead of a quarterly plan.",
+    insight:"The accounts that feel most alive online aren't the best-produced. They're the fastest to notice something and have a genuine point of view on it within hours.",
+    strategy:"Replace the content calendar with a same-day response loop: scan, react, post, in that order, treating culture as the brief instead of a quarterly plan.",
     concept:"A five-day plan showing exactly what would get made each day in response to that week's actual online conversation, with rationale for each call.",
-    execution:"Documented as a working plan with day-by-day logic, not finished assets — meant to demonstrate the thinking process, not a shoot.",
+    execution:"Documented as a working plan with day-by-day logic, not finished assets, meant to demonstrate the thinking process, not a shoot.",
     role:["Concept","Cultural Analysis","Content Planning"],
     gallery:[
-      {ratio:"16/9",format:"CONCEPT · PLAN",label:"5-day map",hue:"a",caption:"Working plan — day-by-day logic"}
+      {ratio:"16/9",format:"CONCEPT · PLAN",label:"5-day map",hue:"a",caption:"Working plan, day-by-day logic"}
     ]
   },
   {
@@ -1300,10 +1247,10 @@ const PROJECTS = [
     format:"ESSAY · POV",
     overview:"A short opinion piece arguing that the standard influencer-briefing process has the pitch backwards, and what changes if you flip it.",
     challenge:"Most brand-creator relationships start with the brand handing down a brief the creator is expected to fit into.",
-    insight:"The best creator content almost never comes from the brand's brief — it comes from the one time a creator pitched their own idea and the brand said yes.",
+    insight:"The best creator content almost never comes from the brand's brief. It comes from the one time a creator pitched their own idea and the brand said yes.",
     strategy:"Make the case for building the intake process around creator-originated pitches, with the brand supplying guardrails instead of scripts.",
     concept:"A point-of-view essay laying out the flipped process and what a brand would need to change operationally to make it work.",
-    execution:"Written as a stand-alone piece of thinking — no production attached.",
+    execution:"Written as a stand-alone piece of thinking, no production attached.",
     role:["Writing","Strategic POV"],
     gallery:[
       {ratio:"1/1",format:"TEXT · ESSAY",label:"Full essay",hue:"b",caption:"Read the full piece"}
@@ -1321,9 +1268,9 @@ const PROJECTS = [
     size:"md",aspect:"4/5",hue:"d",
     format:"CONCEPT · FRAMEWORK",
     overview:"A lightweight internal framework for spotting a micro-trend and getting a brand-relevant response live within 48 hours, before the moment passes.",
-    challenge:"By the time most brands greenlight a trend response, the trend is over. The bottleneck usually isn't creativity — it's process.",
+    challenge:"By the time most brands greenlight a trend response, the trend is over. The bottleneck usually isn't creativity, it's process.",
     insight:"Most brands can move fast creatively. What's actually slow is the decision of whether a trend is worth touching at all.",
-    strategy:"Build a fast triage framework — relevance, risk, and shelf-life scored in minutes — so the only thing left to solve quickly is the idea itself.",
+    strategy:"Build a fast triage framework (relevance, risk, and shelf-life scored in minutes) so the only thing left to solve quickly is the idea itself.",
     concept:"A three-question triage checklist plus a same-day production path, designed to be run by one person without a meeting.",
     execution:"Documented as a one-page working framework with a worked example.",
     role:["Framework Design","Process","Creative Strategy"],
@@ -1374,7 +1321,7 @@ function texturePattern(seed){
 function mediaBlock({ratio, format, hue, glyph, big}){
   const h = HUES[hue]||HUES.a;
   const seed = (format||"").length;
-  return `<div class="frame" style="aspect-ratio:${ratio};background:${h.bg};color:${h.fg}">
+  return `<div class="frame" style="aspect-ratio:${ratio};background:${h.bg};color:${h.fg};width:100%">
     <span class="tex" style="background-image:${texturePattern(seed)};background-size:${18+ (seed%3)*6}px ${18+(seed%3)*6}px;color:${h.fg}"></span>
     ${big?`<span class="glyph" style="color:${h.fg}">${glyph||"BI"}</span>`:""}
     <span class="fmt-tag" style="color:${h.fg}">${format}</span>
@@ -1395,7 +1342,13 @@ function mediaBlock({ratio, format, hue, glyph, big}){
 function renderMedia(media, fallback){
   if(media && media.src){
     const src = escapeHTML(media.src);
-    const baseStyle = `aspect-ratio:${fallback.ratio};object-fit:cover;width:100%;display:block;`;
+    /* `contain` mode (used for the project-detail hero) shows the whole
+       frame at its real aspect ratio instead of cropping it to fill a
+       fixed box — the video/image just renders smaller when its real
+       shape doesn't match the surrounding container. */
+    const baseStyle = fallback.contain
+      ? `aspect-ratio:${fallback.ratio};object-fit:contain;height:min(70vh,640px);width:auto;max-width:100%;display:block;margin-inline:auto;`
+      : `aspect-ratio:${fallback.ratio};object-fit:cover;width:100%;display:block;`;
     if(media.type === "video"){
       const poster = media.poster ? ` poster="${escapeHTML(media.poster)}"` : "";
       return `<video class="frame" style="${baseStyle}" src="${src}"${poster} controls playsinline preload="metadata"></video>`;
@@ -1457,7 +1410,7 @@ function viewHome(){
 
   return `
   <section class="wrap name-lockup">
-    <div class="kicker-row"><span class="rule"></span> BROOKLYN, NY — CREATIVE STRATEGY &amp; SOCIAL <span class="rule"></span></div>
+    <div class="kicker-row"><span class="rule"></span> BROOKLYN, NY &middot; CREATIVE STRATEGY &amp; SOCIAL <span class="rule"></span></div>
     <h1 class="name-big">BECCA <em>INZ</em></h1>
     <div class="hero-ticker" id="ticker"><span>currently thinking about:</span> <b id="tickerWord">creator-led paid social</b><span class="cursor-blink"></span></div>
   </section>
@@ -1473,7 +1426,7 @@ function viewHome(){
       <div>
         <span class="script script-hi">Hi, I'm Becca :)</span>
         <h2 class="balance">A creative strategist who thinks in campaigns, not just content.</h2>
-        <p>I turn a real cultural insight into a concept, brief it for the format it actually lives in, and use what the data says to make the next round sharper — across paid social, organic content, and creator partnerships.</p>
+        <p>I turn a real cultural insight into a concept, brief it for the format it actually lives in, and use what the data says to make the next round sharper, across organic and paid media channels (expertise in paid social, organic content, and partnerships).</p>
         <div class="intro-skills">
           ${["Creative Strategy","Paid Social","Organic Social","Creator Partnerships","Messaging & Hooks"].map(t=>chip(t)).join("")}
         </div>
@@ -1496,13 +1449,13 @@ function viewHome(){
     <div class="wrap">
       <div class="method-head">
         <span class="eyebrow">HOW I THINK</span>
-        <h2 class="balance">Every project moves the same way — from a real insight to a made thing to a measured result.</h2>
+        <h2 class="balance">Every project moves the same way: from a real insight to a made thing to a measured result.</h2>
       </div>
       <div class="method-row">
-        <div class="method-step"><span class="num">01 ›</span><h3>Insight</h3><p>What's actually true about the audience, right now — not the brief's assumption about them.</p></div>
+        <div class="method-step"><span class="num">01 ›</span><h3>Insight</h3><p>What's actually true about the audience right now, not the brief's assumption about them.</p></div>
         <div class="method-step"><span class="num">02 ›</span><h3>Strategy</h3><p>The specific bet: what we're saying, to whom, and why it should work.</p></div>
-        <div class="method-step"><span class="num">03 ›</span><h3>Idea</h3><p>The concept that makes the strategy tangible — the thing you'd actually see.</p></div>
-        <div class="method-step"><span class="num">04 ›</span><h3>Execution</h3><p>Built for the format it lives in — paid, organic, or creator — not forced into one shape.</p></div>
+        <div class="method-step"><span class="num">03 ›</span><h3>Idea</h3><p>The concept that makes the strategy tangible: the thing you'd actually see.</p></div>
+        <div class="method-step"><span class="num">04 ›</span><h3>Execution</h3><p>Built for the format it lives in (paid, organic, or creator), not forced into one shape.</p></div>
         <div class="method-step"><span class="num">05 ›</span><h3>Result</h3><p>What happened, fed back into the next round of creative.</p></div>
       </div>
     </div>
@@ -1534,16 +1487,21 @@ function viewHome(){
 }
 
 const WORK_FILTERS = ["All","Paid Social","Organic Social","Influencer / Creator","Creative Strategy","Campaigns","Partnerships"];
+/* Work-page grouping, in display order. Each project's `section` field
+   (set in the CMS entry) picks which group it renders under; a project
+   with no `section` set won't appear on the Work page at all (use this
+   for pieces that should only live inside another project's gallery,
+   like the Swab Surprise UGC contest videos). */
+const WORK_SECTIONS = ["Viral Moments","Partnerships","Content"];
 let workActive = new Set();
 
 function viewWork(){
-  const items = PROJECTS.filter(p=>!p.isPlayground);
   return `
   <section class="page-head-band tone-dark">
     <div class="wrap page-head">
       <span class="eyebrow">WORK</span>
       <h1 class="balance serif">The archive.</h1>
-      <p>Client work across paid social, organic content, and creator partnerships — filed by what it actually is, not when it happened.</p>
+      <p>Client work across paid social, organic content, and creator partnerships, filed by what it actually is, not when it happened.</p>
     </div>
   </section>
   <section class="wrap">
@@ -1551,19 +1509,30 @@ function viewWork(){
       ${WORK_FILTERS.map(f=>`<button class="chip ${f==='All'?'on':''}" data-filter="${f}">${f}</button>`).join("")}
     </div>
     <div class="count-note" id="workCount"></div>
-    <div class="archive-grid" id="workGrid"></div>
   </section>
-  <section class="wrap archive-section"></section>
+  <section class="wrap archive-section" id="workSections"></section>
   `;
 }
 function mountWork(){
-  const items = PROJECTS.filter(p=>!p.isPlayground);
-  const grid = $("#workGrid");
+  const items = PROJECTS.filter(p=>!p.isPlayground && p.section);
+  const sectionsEl = $("#workSections");
   const countEl = $("#workCount");
   function render(){
     const on = workActive.size ? items.filter(p=>[...workActive].every(f=>p.workType.includes(f))) : items;
-    grid.innerHTML = on.map(cardHTML).join("") || `<p style="grid-column:1/-1;color:var(--ink-faint);font-family:var(--mono);font-size:13px;">No projects match that combination yet.</p>`;
     countEl.textContent = `${on.length} project${on.length===1?"":"s"}`;
+    if(!on.length){
+      sectionsEl.innerHTML = `<p style="color:var(--ink-faint);font-family:var(--mono);font-size:13px;">No projects match that combination yet.</p>`;
+      return;
+    }
+    sectionsEl.innerHTML = WORK_SECTIONS.map(sec=>{
+      const inSection = on.filter(p=>p.section===sec);
+      if(!inSection.length) return "";
+      return `
+      <div class="work-section">
+        <h2 class="work-section-head">${sec}</h2>
+        <div class="archive-grid">${inSection.map(cardHTML).join("")}</div>
+      </div>`;
+    }).join("");
   }
   $$("#workFilters button").forEach(btn=>{
     btn.addEventListener("click",()=>{
@@ -1586,7 +1555,7 @@ function viewPlayground(){
     <div class="wrap page-head">
       <span class="eyebrow">PLAYGROUND</span>
       <h1 class="balance serif">Ideas I can't stop thinking about.</h1>
-      <p>Self-initiated concepts, speculative campaigns, and strategic frameworks — built without a client brief, on my own time, because a good idea doesn't wait for one. Everything here is exploratory and clearly labeled as such.</p>
+      <p>Self-initiated concepts, speculative campaigns, and strategic frameworks, built without a client brief, on my own time, because a good idea doesn't wait for one. Everything here is exploratory and clearly labeled as such.</p>
     </div>
   </section>
   <section class="wrap archive-section">
@@ -1609,9 +1578,9 @@ function viewAbout(){
     <div class="about-copy">
       <span class="eyebrow">ABOUT</span>
       <h1 class="balance">Growth marketer with a creative director's instincts.</h1>
-      <p>I'm <strong>Becca Inz</strong>, a growth marketer and creative strategist based in Fort Greene, Brooklyn. My background is hands-on across <strong>paid social, organic content, and creator partnerships</strong> — Meta, TikTok, Reddit, YouTube, programmatic, and audio — but the throughline is always the same question: what would make someone actually care?</p>
-      <p>I started at Embark, where I scaled and diversified the paid social creative library, built a more sustainable creative-testing approach, and helped drive a <strong>10% year-over-year lift in paid social ROAS</strong> — while also writing and directing organic content that found audiences on its own, including a single TikTok that hit <strong>4.8M+ organic views</strong>.</p>
-      <p>What I'm actually good at sits at the intersection of <strong>creative + strategy + culture + growth</strong>: reading a consumer insight, turning it into a concept, briefing a creator or a paid social test, and using what the data says to make the next round of creative sharper — not just faster.</p>
+      <p>I'm <strong>Becca Inz</strong>, a growth marketer and creative strategist based in Fort Greene, Brooklyn. My background is hands-on across <strong>paid social, organic content, and creator partnerships</strong> (Meta, TikTok, Reddit, YouTube, programmatic, and audio), but the throughline is always the same question: what would make someone actually care?</p>
+      <p>I started at Embark, where I scaled and diversified the paid social creative library, built a more sustainable creative-testing approach, and helped drive a <strong>10% year-over-year lift in paid social ROAS</strong>, while also writing and directing organic content that found audiences on its own, including a single TikTok that hit <strong>4.8M+ organic views</strong>.</p>
+      <p>What I'm actually good at sits at the intersection of <strong>creative + strategy + culture + growth</strong>: reading a consumer insight, turning it into a concept, briefing a creator or a paid social test, and using what the data says to make the next round of creative sharper, not just faster.</p>
 
       <div class="about-section">
         <h2>Where I'm strongest</h2>
@@ -1622,7 +1591,7 @@ function viewAbout(){
 
       <div class="about-section">
         <h2>Brands I'm drawn to</h2>
-        <p style="margin-bottom:0;">Consumer brands with a product worth being excited about and a marketing team willing to let that excitement sound like a person instead of a press release — DTC, pet, beauty, wellness, and culture-adjacent categories especially.</p>
+        <p style="margin-bottom:0;">Consumer brands with a product worth being excited about and a marketing team willing to let that excitement sound like a person instead of a press release: DTC, tech, beauty, fashion, health &amp; wellness, and culture-adjacent categories especially.</p>
       </div>
 
       <div class="about-section">
@@ -1687,7 +1656,7 @@ function viewProject(id){
   </section>
 
   <section class="wrap">
-    <div class="proj-hero-media">${renderMedia(p.media, {ratio:p.aspect==="9/16"?"21/9":p.aspect, format:p.format, hue:p.hue, glyph:initials(p.title), big:true})}</div>
+    <div class="proj-hero-media">${renderMedia(p.media, {ratio:p.aspect, format:p.format, hue:p.hue, glyph:initials(p.title), big:true, contain:true})}</div>
   </section>
 
   <section class="wrap">
